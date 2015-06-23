@@ -1,3 +1,5 @@
+# the logic of my function which I used for testing
+# http://rubular.com/ is a big help for regex
 raw = File.open('/tmp/output.yaml')
 clean = File.open('/tmp/itsclean.yaml','w')
 
