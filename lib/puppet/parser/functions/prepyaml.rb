@@ -13,8 +13,8 @@ module Puppet::Parser::Functions
       if line.chomp == '' then
         next
       end
-      l = line.chomp.strip.gsub(/\s+:/, ':').gsub(/^([^:]+)(:\s?)([\s\S]*)$/, "\"\\1\": \"\\3\"")
-      clean.puts l
+      fixed_line = line.chomp.strip.gsub(/\s+:/, ':').gsub(/^([^:]+)(:\s?)([\s\S]*)$/, "\"\\1\": \"\\3\"")
+      clean.puts fixed_line
     end
 
     clean.close()
